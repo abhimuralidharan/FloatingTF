@@ -1,26 +1,138 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FloatingTF" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aqZ-vB-sQa" customClass="FloatingTF" customModule="FloatingTF" customModuleProvider="target">
+                                <rect key="frame" x="40" y="170" width="688" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="YhI-nG-oth"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enableFloatingTitle" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeBottomLineColor">
+                                        <color key="value" red="0.8712429404258728" green="0.13492506742477417" blue="0.30001494288444519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveBottomLineColor">
+                                        <color key="value" cocoaTouchSystemColor="lightTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="errorBottomLineColor">
+                                        <color key="value" red="0.8712429404258728" green="0.13492506742477417" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleActiveTextColor">
+                                        <color key="value" red="0.87124294040000005" green="0.13492506739999999" blue="0.30001494290000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleInactiveTextColor">
+                                        <color key="value" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="IcL-gl-B4a">
+                                <rect key="frame" x="126.5" y="50" width="516" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="gFL-HZ-cfC"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AWt-DS-K9L" customClass="FloatingTF" customModule="FloatingTF" customModuleProvider="target">
+                                <rect key="frame" x="40" y="240" width="688" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9Rx-p1-f2D"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enableFloatingTitle" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeBottomLineColor">
+                                        <color key="value" red="0.87124294040000005" green="0.13492506739999999" blue="0.30001494290000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveBottomLineColor">
+                                        <color key="value" cocoaTouchSystemColor="lightTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="errorBottomLineColor">
+                                        <color key="value" red="0.87124294040000005" green="0.13492506739999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleActiveTextColor">
+                                        <color key="value" red="0.87124294040000005" green="0.13492506739999999" blue="0.30001494290000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleInactiveTextColor">
+                                        <color key="value" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8j6-fc-n3C">
+                                <rect key="frame" x="190.5" y="315" width="387" height="50"/>
+                                <color key="backgroundColor" red="0.83282715082168579" green="0.12980228662490845" blue="0.2885589599609375" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ugN-QV-1Xl"/>
+                                </constraints>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="emailErrorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CSN-p5-owC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.07412826269865036" green="0.066655673086643219" blue="0.070896796882152557" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aqZ-vB-sQa" firstAttribute="centerX" secondItem="IcL-gl-B4a" secondAttribute="centerX" id="2F9-aY-l7s"/>
+                            <constraint firstItem="8j6-fc-n3C" firstAttribute="width" secondItem="IcL-gl-B4a" secondAttribute="width" multiplier="0.75" id="3BO-c2-uRw"/>
+                            <constraint firstItem="AWt-DS-K9L" firstAttribute="top" secondItem="aqZ-vB-sQa" secondAttribute="bottom" constant="20" id="58n-V6-VLz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aqZ-vB-sQa" secondAttribute="trailing" constant="20" id="6s4-m6-Asa"/>
+                            <constraint firstItem="8j6-fc-n3C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Eqw-BB-a9N"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="8j6-fc-n3C" secondAttribute="trailing" constant="20" id="FvZ-yc-N7j"/>
+                            <constraint firstItem="IcL-gl-B4a" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="LTE-02-1S6"/>
+                            <constraint firstItem="AWt-DS-K9L" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="N94-uC-lcm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AWt-DS-K9L" secondAttribute="trailing" constant="20" id="Te7-l0-vG6"/>
+                            <constraint firstItem="8j6-fc-n3C" firstAttribute="top" secondItem="AWt-DS-K9L" secondAttribute="bottom" constant="25" id="YdA-N1-vQ0"/>
+                            <constraint firstItem="aqZ-vB-sQa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="i0h-QT-LSC"/>
+                            <constraint firstItem="8j6-fc-n3C" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="lB6-vF-KLb"/>
+                            <constraint firstItem="aqZ-vB-sQa" firstAttribute="top" secondItem="IcL-gl-B4a" secondAttribute="bottom" constant="20" id="lMk-oJ-3Af"/>
+                            <constraint firstItem="IcL-gl-B4a" firstAttribute="width" secondItem="aqZ-vB-sQa" secondAttribute="width" multiplier="0.75" id="xND-jm-E7b"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTF" destination="aqZ-vB-sQa" id="Wdl-Xa-2Kl"/>
+                        <outlet property="loginButtton" destination="8j6-fc-n3C" id="v4g-Cd-Tfh"/>
+                        <outlet property="passwordTF" destination="AWt-DS-K9L" id="1Qn-rN-Fbd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo.jpg" width="1366" height="351"/>
+    </resources>
 </document>

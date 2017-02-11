@@ -7,20 +7,23 @@
 //
 
 import UIKit
-
+import QuartzCore
 class ViewController: UIViewController {
 
+    @IBOutlet weak var emailTF: FloatingTF!
+    @IBOutlet weak var passwordTF: FloatingTF!
+    @IBOutlet weak var loginButtton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        print("view")
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
+    override func viewDidAppear(_ animated: Bool) {
+        loginButtton.layer.cornerRadius = 5.0
+    }
+    @IBAction func emailErrorAction(_ sender: Any) {
+        emailTF.setErrorAlertActive = true
+    }
 
 }
 
